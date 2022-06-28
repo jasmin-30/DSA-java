@@ -1,4 +1,4 @@
-package Mathematics;
+package mathematics;
 
 // Most Efficient way to find prime numbers in a given range.
 public class SieveOfEratosthenes {
