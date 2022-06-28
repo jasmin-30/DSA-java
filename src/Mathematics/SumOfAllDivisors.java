@@ -4,14 +4,17 @@ package Mathematics;
 Sum of divisors of a given number
 i/p: 4
 o/p: 7
+exp : 1 + 2 + 4 = 7
 
 i/p: 5
-o/p: 21
+o/p: 6
+exp: 1 + 5 = 6
  */
 public class SumOfAllDivisors {
     public static void main(String[] args) {
-//        System.out.println(divisorsSum(4));
-        System.out.println(divisorsSum(2));
+        System.out.println(divisorsSum(4));
+        System.out.println(divisorsSum(5));
+        System.out.println(divisorsSum(100));
     }
 
     public static int divisorsSum(int n) {
