@@ -1,4 +1,4 @@
-package practice;
+package practice.mathematics;
 
 /*
 Sum of divisors of a given number
