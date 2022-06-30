@@ -11,7 +11,6 @@ public class PrimeChecker {
     private static int N = 1000000;
     private static boolean[] primes = new boolean[1000001];
     static {
-        long startTime = System.currentTimeMillis();
         for (int i=2; i<=N; ++i) {
             primes[i] = true;
         }
@@ -22,8 +21,6 @@ public class PrimeChecker {
                 }
             }
         }
-        long endTime = System.currentTimeMillis();
-        System.out.println(endTime - startTime);
     }
 
     public static void main(String[] args) throws IOException {
