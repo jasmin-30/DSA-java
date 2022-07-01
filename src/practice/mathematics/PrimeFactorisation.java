@@ -13,7 +13,7 @@ public class PrimeFactorisation {
     static int N = 1000000;
     static int[] spf = new int[N + 1];
 
-    static void createSieve() {
+    static void primeFactors() {
         for (int i=2;i*i<=N;++i) {
             if (spf[i]==0) {
                 spf[i] = i;
@@ -26,7 +26,7 @@ public class PrimeFactorisation {
     }
 
     public static void main(String[] args) throws IOException {
-        createSieve();
+        primeFactors();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(reader.readLine());
         while(t-- > 0) {
