@@ -4,6 +4,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+for n = 5
+
+1
+0 1
+1 0 1
+0 1 0 1
+1 0 1 0 1
+
+ */
 public class BinaryHalfPyramid {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
