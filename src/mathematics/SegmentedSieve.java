@@ -64,6 +64,11 @@ public class SegmentedSieve {
             }
 
             // Step 4 : get all prime numbers from dummy array
+            
+            // handling case where l = 1, so first number in range which is will not be marked as prime.
+            if (l == 1)
+                dummy[0] = true;
+
             for (int i = l; i <= r; i++) {
                 if (!dummy[i-l]) {
                     System.out.print(i + " ");
