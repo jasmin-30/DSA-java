@@ -6,6 +6,11 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+Problem Link: https://www.codechef.com/submit/RIFFLES
+
+This is solved in O(N) time complexity. However we can solve this using binary exponentiation technique in O(NlogN) time complexity
+ */
 public class RIFFLES {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
