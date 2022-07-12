@@ -45,6 +45,7 @@ public class CountSetBits {
     }
 
     // PreComputation for solution3
+    // we will check last bit and discard last bit and check for it's precomputed value
     public static void preCompute() {
         table[0] = 0;
         for (int i = 1; i < 256; i++) {
