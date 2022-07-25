@@ -18,6 +18,10 @@ public class LeftRotationByOne {
         System.out.println(Arrays.toString(arr));
     }
 
+    /*
+    TC: O(n)
+    SC: O(1)
+     */
     private static void leftRotate(int[] arr, int n) {
         int tmp = arr[0];
         for (int i=1;i<n;i++)
