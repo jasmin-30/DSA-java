@@ -17,9 +17,13 @@ public class StockBuyAndSell {
         for (int i=0;i<n;i++) {
             arr[i] = Integer.parseInt(str_a[i]);
         }
-        System.out.println(maxProfit1(arr, 0, n-1));
+        System.out.println(maxProfit2(arr, n));
     }
 
+    /*
+    TC: O(n^2)
+    SC: O(n^2) - for recursion stack
+     */
     private static int maxProfit1(int[] arr, int start, int end) {
         if (start >= end)
             return 0;
@@ -36,6 +40,21 @@ public class StockBuyAndSell {
                 }
             }
         }
+        return profit;
+    }
+
+    /*
+    TC: O(n)
+    SC: O(1)
+     */
+    private static int maxProfit2(int[] prices, int n) {
+        int profit = 0;
+
+        for (int i = 1;i<n;i++) {
+            if (prices[i] > prices[i-1])
+                profit += prices[i] - prices[i-1];
+        }
+
         return profit;
     }
 }
