@@ -14,7 +14,7 @@ public class TrappingRainWater {
             arr[i] = Integer.parseInt(str_a[i]);
         }
 
-        System.out.println(getWater1(arr, n));
+        System.out.println(getWater2(arr, n));
     }
 
     /*
@@ -37,5 +37,29 @@ public class TrappingRainWater {
         }
 
         return res;
+    }
+
+    /*
+    TC: O(n)
+    SC: O(n)
+     */
+    private static int getWater2(int[] arr, int n) {
+        int[] lMax = new int[n];
+        int[] rMax = new int[n];
+        int res = 0;
+
+        lMax[0] = arr[0];
+        for (int i=1;i<n;i++)
+            lMax[i] = Math.max(arr[i], lMax[i-1]);
+
+        rMax[n-1] = arr[n-1];
+        for (int j=n-2;j>=0;j--)
+            rMax[j] = Math.max(arr[j], rMax[j+1]);
+
+        for (int i=1;i<n-1;i++)
+            res += Math.min(lMax[i], rMax[i]) - arr[i];
+
+        return res;
+
     }
 }
