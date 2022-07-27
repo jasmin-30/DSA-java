@@ -20,7 +20,7 @@ public class MaximumConsecutiveOnes {
         for (int i=0;i<n;i++) {
             arr[i] = Integer.parseInt(str_a[i]);
         }
-        System.out.println(maxConsecutiveOnes1(arr, n));
+        System.out.println(maxConsecutiveOnes2(arr, n));
     }
 
 
