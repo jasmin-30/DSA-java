@@ -40,4 +40,20 @@ public class MaximumConsecutiveOnes {
         }
         return res;
     }
+
+    /*
+    TC: O(n)
+    SC: O(1)
+     */
+    private static int maxConsecutiveOnes2(int[] arr, int n) {
+        int res=0, curr=0;
+        for (int i=0;i<n;i++) {
+            if (arr[i] == 1) {
+                curr += 1;
+                res = Math.max(curr, res);
+            } else
+                curr = 0;
+        }
+        return res;
+    }
 }
