@@ -30,9 +30,13 @@ public class MaximumSubarraySum {
         for (int i=0;i<n;i++) {
             arr[i] = Integer.parseInt(str_a[i]);
         }
-        System.out.println(maxSubarraySum1(arr, n));
+        System.out.println(maxSubarraySum2(arr, n));
     }
 
+    /*
+    TC: O(n^2)
+    SC: O(1)
+     */
     private static int maxSubarraySum1(int[] arr, int n) {
         int res = Integer.MIN_VALUE;
 
@@ -42,6 +46,22 @@ public class MaximumSubarraySum {
                 currSum += arr[j];
                 res = Math.max(res, currSum);
             }
+        }
+        return res;
+    }
+
+
+    /*
+    TC: O(n)
+    SC: O(1)
+     */
+    private static int maxSubarraySum2(int[] arr, int n) {
+        int res = arr[0];
+        int prevMaxSum = arr[0];
+
+        for (int i=1;i<n;i++) {
+            prevMaxSum = Math.max(arr[i], prevMaxSum + arr[i]);
+            res = Math.max(res, prevMaxSum);
         }
         return res;
     }
